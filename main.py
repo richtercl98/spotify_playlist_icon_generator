@@ -1,6 +1,7 @@
 from PlaylistIconGenerator import PlaylistIconGenerator
 from PlaylistIcon import PlaylistIcon
 from Types import Size
+from constants import SOUNDCLOUD_ICON_SIZE
 
 test_playlist_icon_args = {
     'filename': 'test_playlist_icon',
@@ -28,7 +29,7 @@ test_playlist_icon_generator_args = {
     'name': '2026_Spotify',
     'base_color': BASE_COLOR_2026,
     'subtext_text': '2026',
-
+    'icon_size': SOUNDCLOUD_ICON_SIZE,
 }
 
 if __name__ == '__main__':

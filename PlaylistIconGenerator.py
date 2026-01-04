@@ -21,7 +21,7 @@ HEADLINE_TEXTS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep',
 
 class PlaylistIconGenerator:
 
-    def __init__(self, name: str, base_color: Color, subtext_text: str, icon_size: Size=Size(300, 300), data_type: str='png'):
+    def __init__(self, name: str, base_color: Color, subtext_text: str, icon_size: Size=Size(144, 144), data_type: str='png'):
         self.name = name
         self.base_color = base_color
         self.icon_size = icon_size
