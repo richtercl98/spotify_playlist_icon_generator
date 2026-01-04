@@ -4,11 +4,15 @@ import seaborn as sb
 from PlaylistIcon import PlaylistIcon
 from Types import Size
 
+from constants import HEADLINE_FONT_LINUX, SUBTEXT_FONT_LINUX
+
 Color = (int, int, int)
 
-HEADLINE_FONT = 'Fonts\\Circular\\circularstd-medium.otf'
+# HEADLINE_FONT_WINDOWS = 'Fonts\\Circular\\circularstd-medium.otf'
+# HEADLINE_FONT_LINUX = './Fonts/Circular/circularstd-medium.otf'
 HEADLINE_FONT_TO_SIZE_RATIO = 13/36
-SUBTEXT_FONT = 'Fonts\\Circular\\circularstd-book.otf'
+# SUBTEXT_FONT_WINDOWS = 'Fonts\\Circular\\circularstd-book.otf'
+# SUBTEXT_FONT_LINUX = './Fonts/Circular/circularstd-book.otf'
 SUBTEXT_FONT_TO_SIZE_RATIO = 1/9
 TEXT_COLOR = (42, 42, 42)
 
@@ -46,12 +50,12 @@ class PlaylistIconGenerator:
             print(headline, idx)
 
             icon_params = {
-                'filename': self.name + '\\' + self.subtext_text,
+                'filename': os.path.join(self.name, self.subtext_text),
                 'color' : self.color_list[idx],
                 'month_number_text': headline,
                 'subtext': self.subtext_text,
-                'font_name_headline': HEADLINE_FONT,
-                'font_name_subtext': SUBTEXT_FONT,
+                'font_name_headline': HEADLINE_FONT_LINUX,
+                'font_name_subtext': SUBTEXT_FONT_LINUX,
                 'font_size_headline': int(self.icon_size.height*HEADLINE_FONT_TO_SIZE_RATIO),
                 'font_size_subtext': int(self.icon_size.height*SUBTEXT_FONT_TO_SIZE_RATIO),
                 'text_color': TEXT_COLOR,
@@ -62,6 +66,7 @@ class PlaylistIconGenerator:
             if headline == 'Top-Songs':
                 # icon_params['month_number_text'] = 'Top-Songs'
                 icon_params['font_size_headline'] = 54
+            print("PlaylistIcon params:", icon_params)
             image_list.append(PlaylistIcon(**icon_params))
         return image_list
 

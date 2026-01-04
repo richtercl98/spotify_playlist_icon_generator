@@ -19,12 +19,15 @@ test_playlist_icon_args = {
 
 BASE_COLOR_2021 = (255, 105, 235)
 BASE_COLOR_2022 = (80, 125, 200)
-BASE_COLOR_2023 = ()
+BASE_COLOR_2023 = (255, 115, 30)    # Probably wrong
+BASE_COLOR_2024 = (255, 115, 30)    # Probably wrong
+BASE_COLOR_2025 = (255, 115, 30)    # Probably wrong
+BASE_COLOR_2026 = (254, 59, 34)
 
 test_playlist_icon_generator_args = {
-    'name': '2023_Spotify',
-    'base_color': (255, 115, 30),
-    'subtext_text': '2023',
+    'name': '2026_Spotify',
+    'base_color': BASE_COLOR_2026,
+    'subtext_text': '2026',
 
 }
 

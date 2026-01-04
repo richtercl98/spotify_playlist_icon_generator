@@ -3,13 +3,17 @@ import os
 from PIL import Image, ImageDraw, ImageFont
 from Types import Size
 
+from constants import HEADLINE_FONT_LINUX, SUBTEXT_FONT_LINUX
+
 Color = (int, int, int)
-HEADLINE_FONT = 'Fonts\\Circular\\circularstd-medium.otf'
-SUBTEXT_FONT = 'Fonts\\Circular\\circularstd-book.otf'
+# HEADLINE_FONT_WINDOWS = 'Fonts\\Circular\\CircularStd-Medium.otf'
+# SUBTEXT_FONT_WINDOWS = 'Fonts\\Circular\\CircularStd-Book.otf'
+# HEADLINE_FONT_LINUX = r'/home/clemens/Documents/programming/spotify_playlist_icon_generator/Fonts/Circular/CircularStd-Medium.otf'
+# SUBTEXT_FONT_LINUX = r'/home/clemens/Documents/programming/spotify_playlist_icon_generator/Fonts/Circular/CircularStd-Book.otf'
 
 class PlaylistIcon:
 
-    def __init__(self, filename: str, color: Color, subtext: str, font_name_headline: str=HEADLINE_FONT, font_name_subtext: str=SUBTEXT_FONT, text_color: Color=(0, 0, 0), font_size_headline: int=48, font_size_subtext: int=24, text_location: str='center', icon_size: Size=Size(144, 144), data_type: str='png', month_number_text: str='01') -> None:
+    def __init__(self, filename: str, color: Color, subtext: str, font_name_headline: str=HEADLINE_FONT_LINUX, font_name_subtext: str=SUBTEXT_FONT_LINUX, text_color: Color=(0, 0, 0), font_size_headline: int=48, font_size_subtext: int=24, text_location: str='center', icon_size: Size=Size(144, 144), data_type: str='png', month_number_text: str='01') -> None:
         self.filename = filename
         self.filename_separator = "_"
         self.filename_type_separator = "."
@@ -28,8 +32,7 @@ class PlaylistIcon:
         self.text_color = text_color
         self.month_number_text = month_number_text
 
-        # self.text_with_month_number = self.month_number_text + str('\n') + self.text
-
+        # self.text_with_month_number = self.month_number_text + str('\n') + self.text)
         self.path = self.filename + self.filename_separator + self.month_number_text + self.filename_type_separator + self.data_type
         self.image = Image.new(
             mode="RGB",
