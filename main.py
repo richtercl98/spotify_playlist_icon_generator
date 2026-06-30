@@ -24,11 +24,22 @@ BASE_COLOR_2023 = (255, 115, 30)    # Probably wrong
 BASE_COLOR_2024 = (255, 115, 30)    # Probably wrong
 BASE_COLOR_2025 = (255, 115, 30)    # Probably wrong
 BASE_COLOR_2026 = (254, 59, 34)
+BASE_COLOR_2027 = (55, 92, 23)
+# BASE_COLOR_2027 = (55, 92, 120) # Also cool?
 
+# 2026
+# test_playlist_icon_generator_args = {
+#     'name': '2026_Spotify',
+#     'base_color': BASE_COLOR_2026,
+#     'subtext_text': '2026',
+#     'icon_size': SOUNDCLOUD_ICON_SIZE,
+# }
+
+# 2027
 test_playlist_icon_generator_args = {
-    'name': '2026_Spotify',
-    'base_color': BASE_COLOR_2026,
-    'subtext_text': '2026',
+    'name': '2027_Spotify',
+    'base_color': BASE_COLOR_2027,
+    'subtext_text': '2027',
     'icon_size': SOUNDCLOUD_ICON_SIZE,
 }
 
